@@ -14,8 +14,10 @@ import ExpandMoreIcon from "@material-ui/icons/ExpandMore"
 import AddIcon from "@material-ui/icons/Add"
 import SidebarOption from "./SidebarOption"
 import db from "../firebase"
+import { useStateValue } from "../stateProvider"
 
 function Sidebar() {
+  const [{ user }] = useStateValue()
   const [channels, setChannels] = useState([])
 
   useEffect(() => {
@@ -36,7 +38,7 @@ function Sidebar() {
           <h2>Codinoz</h2>
           <h3>
             <FiberManualRecordIcon />
-            Jameem Mohammed
+            {user?.displayName}
           </h3>
         </div>
         <CreateIcon />
@@ -58,6 +60,7 @@ function Sidebar() {
           title={channel.name}
           id={channel.id}
           addChannelOptions=""
+          key={channel.id}
         />
       ))}
     </div>
