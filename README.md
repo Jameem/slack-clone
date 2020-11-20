@@ -1,4 +1,4 @@
-## Available Scripts
+## Slack Clone
 
 In the project directory, you can run:
 
