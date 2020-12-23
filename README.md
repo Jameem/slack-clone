@@ -1,6 +1,6 @@
 ## Slack Clone
 
-#### A front-end clone to Slack with react and firebase
+#### A front-end clone to Slack with react and firebase.
 
 In the project directory, you can run:
 
